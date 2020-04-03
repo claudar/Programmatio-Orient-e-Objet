@@ -59,16 +59,7 @@
 									return $this->service = $service;
 							}
 							
-						public function Anciennete()
-								{
-									$result = $this->pdo->query("SELECT `emp_dateembauche` FROM employe");
-									while (list($dateEmbauche) = $requete->fetch(PDO::FETCH_NUM))
-									{
-										$date = date("Y-m-d");
-										$anciennete = date_diff(new Datetime($date), new Datetime($dateEmbauche));
-										echo $anciennete->format('%Y')."<br>";
-									}
-								}
+						
 
 									public function Listing()
 											{
